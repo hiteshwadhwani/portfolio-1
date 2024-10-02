@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 60 7% 3%;
+
+        --primary: 177 61% 29%;
+
+        --border: 0 0% 61%;
+
+        --form-prog: 0deg;
+
+        --opacity-color: 0, 0, 0;
+    }
+
+    .dark {
+        --background: 60, 7%, 3%;
+        --foreground: 255 36% 96%;
+
+        --primary: 177 61% 29%;
+
+        --border: 0 1.53% 33.49%;
+
+        --opacity-color: 203, 203, 219;
+    }
+}
+
+@layer base {
+    body {
+        @apply bg-background text-foreground font-inter;
+    }
+
+    .dot-blur {
+        background-image: radial-gradient(rgba(0, 0, 0, 0.4) 1px, transparent 1px);
+        background-size: 10px 10px;
+        backdrop-filter: blur(20px);
+    }
+
+    .dot-blur-dark {
+        background-image: radial-gradient(rgba(190, 190, 190, 0.4) 1px, transparent 1px);
+        background-size: 10px 10px;
+        backdrop-filter: blur(20px);
+    }
+
+    .text-reveal {
+        display: inline;
+        background: linear-gradient(
+            to right,
+            rgba(var(--opacity-color), 1) 0%,
+            rgba(var(--opacity-color), 1) 50%,
+            rgba(var(--opacity-color), 0.2) 50%,
+            rgba(var(--opacity-color), 0.2) 100%
+        );
+        background-clip: text;
+        background-size: 200% 100%;
+        background-position: right bottom;
+        color: transparent;
+        background-repeat: no-repeat;
+    }
+
+    .hoverText {
+        transition: 0.35s font-weight, 0.35s color;
+    }
+
+    .hoverText:hover {
+        font-weight: 900;
+    }
+
+    /* To the right */
+    .hoverText:hover + .hoverText {
+        font-weight: 500;
+    }
+
+    .hoverText:hover + .hoverText + .hoverText {
+        font-weight: 300;
+    }
+
+    /* To the left */
+    .hoverText:has(+ .hoverText:hover) {
+        font-weight: 500;
+    }
+
+    .hoverText:has(+ .hoverText + .hoverText:hover) {
+        font-weight: 300;
+    }
+}
