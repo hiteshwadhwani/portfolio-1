@@ -6,7 +6,7 @@ import {user} from "../config/data"
 // import Services from '../components/Services';
 import Skills from '../components/Skills';
 import Contact from '../components/Contact';
-import Testimonials from '../components/Testimonials';
+// import Testimonials from '../components/Testimonials';
 import Cursor from '../components/Cursor';
 import Header from '../components/Header';
 import Hero from '../components/Hero';

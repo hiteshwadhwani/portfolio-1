@@ -180,7 +180,7 @@ const Hero = ({ about, socialHandles }: HeroProps) => {
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: 0.4 + index * 0.1, type: 'spring' }}
                                 viewport={{ once: true }}
-                                key={social._id}
+                                key={index}
                             >
                                 <Link to={social.url} target="_blank">
                                     <span>{social.platform}</span>

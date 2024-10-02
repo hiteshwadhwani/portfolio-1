@@ -69,7 +69,6 @@ export interface SocialHandle {
     url: string;
     image: Image;
     enabled: boolean;
-    _id: string;
 }
 
 export interface Service {

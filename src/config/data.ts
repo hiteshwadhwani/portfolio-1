@@ -691,7 +691,6 @@ export const user = {
           "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718263294-2lfj67.webp"
         },
         "enabled": true,
-        "_id": "65b3e99beb20546ae6d463c2"
       },
       {
         "enabled": true,
@@ -701,18 +700,16 @@ export const user = {
           "public_id": "1708718328750-d4jsq.webp",
           "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718328750-d4jsq.webp"
         },
-        "_id": "65b3e47cb48589dfcae185bd"
       },
       {
-        "enabled": true,
-        "platform": "Facebook",
+        "platform": "Github",
         "url": "#",
         "image": {
-          "public_id": "1708718346601-xldm.webp",
-          "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718346601-xldm.webp"
+          "public_id": "1708718263294-2lfj67.webp",
+          "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718263294-2lfj67.webp"
         },
-        "_id": "65b3e43cb48589dfcae1856c"
-      }
+        "enabled": true,
+      },
     ],
     "services": [
       {
