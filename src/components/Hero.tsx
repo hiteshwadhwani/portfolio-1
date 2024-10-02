@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { About, SocialHandle } from '../utils/interfaces';
 import { OpacityTextReveal } from './ui/Animations';

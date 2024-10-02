@@ -8,7 +8,6 @@ import { SectionHeader, SectionTitle } from './ui/Section';
 import { useMediaQuery } from '../utils/useMediaQuery';
 import Button from './ui/Button';
 import { useVariants } from '../utils/useVariants';
-import { menuBoxes } from '../utils/animate';
 import DialogWrapper from './ui/DialogWrapper';
 
 interface ProjectProps {

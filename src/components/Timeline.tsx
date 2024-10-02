@@ -10,7 +10,7 @@ interface TimelineProp {
     education: ITimeline[];
 }
 
-const Timeline = ({ experience, education }: TimelineProp) => {
+const Timeline = ({ experience }: TimelineProp) => {
     const containerRef = useRef(null);
 
     return (
