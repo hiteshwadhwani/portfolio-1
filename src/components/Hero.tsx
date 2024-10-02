@@ -24,12 +24,6 @@ const Hero = ({ about, socialHandles }: HeroProps) => {
         };
     }, [toggleProjects]);
 
-    const variants = {
-        initial: { opacity: 0, y: '100%' },
-        animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: '-100%' },
-    };
-
     return (
         <main className="overflow-hidden" ref={container}>
             <div className="absolute top-60 -left-10 blur-[200px] -z-10 dark:hidden">

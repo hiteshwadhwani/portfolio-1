@@ -27,14 +27,28 @@ const Header = () => {
 
     return (
         <header className="border-b bg-white/30 dark:bg-background border-border z-20 h-14 sticky top-0">
-            <nav className="flex items-center justify-between md:grid grid-cols-[calc(100%-4rem)_4rem] divide-x divide-border relative z-10 h-full">
-                <div className="flex items-center justify-between max-md:flex-1">
-                    <h1 className="text-2xl tracking-tighter self-center pl-4">ThePortfolyo</h1>
+            <nav className="flex items-center justify-between divide-x divide-border relative z-10 h-full">
+                <div className="flex items-center justify-between flex-1">
+                <ul className="items-center justify-center gap-5 pl-[2rem] hidden md:flex">
+                        {navLinks.map((link, index) => (
+                            <motion.li
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: 0.4 + index * 0.1, type: 'spring' }}
+                                viewport={{ once: true }}
+                                key={index}
+                            >
+                                <Link to={link.path}>
+                                    <span>{link.label}</span>
+                                </Link>
+                            </motion.li>
+                        ))}
+                    </ul>
                     <button className="mr-2 md:mr-4 hover:bg-black/20 dark:hover:bg-black p-2 rounded-xl" onClick={toggleTheme}>
                         <span className="z-10">{theme === 'dark' ? <Moon /> : <Sun />}</span>
                     </button>
                 </div>
-                <div className="px-1 grid place-items-center self-center h-full">
+                <div className="px-1 place-items-center self-center h-full block md:hidden">
                     <motion.div
                         className="size-12 flex items-center justify-center relative cursor-pointer aspect-square"
                         onMouseEnter={() => setBtnHover(true)}
@@ -166,10 +180,6 @@ const navLinks = [
     {
         label: 'Work',
         path: '#work',
-    },
-    {
-        label: 'Services',
-        path: '#services',
     },
     {
         label: 'Contact',

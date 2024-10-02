@@ -39,7 +39,7 @@ function Home() {
     const filteredEducation = user?.timeline?.filter((item) => item.forEducation && item.enabled);
 
     return (
-        <>
+        <div className='overflow-x-hidden'>
             <Cursor />
             <Header />
             <Hero about={user.about} socialHandles={filteredSocialHandles} />
@@ -49,7 +49,7 @@ function Home() {
             {/* <Services services={filteredServices} /> */}
             {/* <Testimonials testimonials={filteredTestimonials} /> */}
             <Contact email={user.email} socialHandles={filteredSocialHandles} about={user.about} />
-        </>
+        </div>
     );
 }
 
