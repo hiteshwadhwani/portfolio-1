@@ -19,8 +19,8 @@ const Timeline = ({ experience }: TimelineProp) => {
                 <SectionTitle>Experience</SectionTitle>
             </SectionHeader>
             <div className="space-y-5 px-2 md:px-8">
-                {experience.map((timeline) => (
-                    <TimelineCard key={timeline._id} timeline={timeline} />
+                {experience.map((timeline, index) => (
+                    <TimelineCard key={index} timeline={timeline} />
                 ))}
             </div>
         </section>
@@ -67,7 +67,11 @@ const TimelineCard = ({ timeline }: CardProp) => {
                     >
                         <span>{formatDate(timeline.startDate).month + ', ' + formatDate(timeline.startDate).year}</span>
                         <span className="max-md:hidden">-</span>
-                        <span>{formatDate(timeline.endDate).month + ', ' + formatDate(timeline.endDate).year}</span>
+                        {timeline.endDate ? (
+                            <span>{formatDate(timeline.endDate).month + ', ' + formatDate(timeline.endDate).year}</span>
+                        ) : (
+                            <span>Present</span>
+                        )}
                     </motion.p>
                 </div>
                 <motion.div
