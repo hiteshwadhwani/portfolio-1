@@ -15,14 +15,6 @@ const Timeline = ({ experience }: TimelineProp) => {
 
     return (
         <section className="pb-10 " ref={containerRef}>
-            {/* <SectionHeader className="mb-10">
-                <SectionTitle>Education</SectionTitle>
-            </SectionHeader>
-            <div className="space-y-5 px-2 md:px-8 pb-10">
-                {education.map((timeline) => (
-                    <TimelineCard key={timeline._id} timeline={timeline} />
-                ))}
-            </div> */}
             <SectionHeader className="mb-10">
                 <SectionTitle>Experience</SectionTitle>
             </SectionHeader>

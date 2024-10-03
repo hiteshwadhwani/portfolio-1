@@ -44,7 +44,6 @@ export interface Skill {
     sequence: number;
     percentage: number;
     image: Avatar;
-    _id: string;
 }
 
 export interface Project {
@@ -67,7 +66,6 @@ export interface Image {
 export interface SocialHandle {
     platform: string;
     url: string;
-    image: Image;
     enabled: boolean;
 }
 
